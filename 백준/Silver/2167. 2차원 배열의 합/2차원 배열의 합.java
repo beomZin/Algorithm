@@ -17,8 +17,6 @@ public class Main {
 
         int K = sc.nextInt();
 
-
-
         for(int i = 0; i < K; i++) {
             int sum = 0;
 
@@ -35,7 +33,6 @@ public class Main {
 
            System.out.println(sum);
         }
-
 
     }
 }
