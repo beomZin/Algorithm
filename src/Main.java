@@ -4,29 +4,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-       int[] arr = new int[30];
-       int[] num = new int[28];
+        int N = sc.nextInt();
 
-       for(int i = 1; i <= arr.length; i++) {
-           arr[i - 1] = i;
-       }
+        int sum = 0;
+        int[][] arr = new int[100][100];
 
-       for(int i = 0; i < num.length; i++) {
-           num[i] = sc.nextInt();
-       }
+        for(int i = 0; i < N; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            for(int j = a; j < a + 10; j++) {
+                for(int k = b; k < b + 10; k++) {
+                    arr[j][k] = 1;
+                }
+            }
+        }
 
-       for(int i = 0; i < arr.length; i++) {
-           for(int j = 0; j < num.length; j++) {
-               if(arr[i] == num[j]) {
-                  arr[i] = -1;
-               }
-           }
-       }
+        for(int i = 0; i < 100; i++) {
+            for(int j = 0; j < 100; j++) {
+                if(arr[i][j] == 1) {
+                    sum++;
+                }
+            }
+        }
 
-       for(int i = 0; i < arr.length; i++) {
-           if(arr[i] != -1) {
-               System.out.println(arr[i]);
-           }
-       }
+        System.out.println(sum);
     }
+
 }
