@@ -32,7 +32,7 @@ public class Main {
 
            std = ((double)cnt/(double)N) * 100;
 
-           System.out.printf("%.3f%%\n",std);
+           System.out.println(String.format("%.3f",std) + "%");
        }
 
     }
